@@ -1,11 +1,9 @@
-FROM Mohammedsafwat090/telethon:alpine
+FROM telethonAr/telethonArab:slim-buster
 
-#clonning repo 
-RUN git clone https://github.com/Mohammedsafwat090/telethon.git /root/userbot
-#working directory 
+RUN git clone https://github.com/telethonArab/TelethonAr /root/userbot
 WORKDIR /root/userbot
 
-# Install requirements
+## Install requirements
 RUN pip3 install -U -r requirements.txt
 
 ENV PATH="/home/userbot/bin:$PATH"
